@@ -1,0 +1,31 @@
+body {
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: rgb(66, 13, 13);
+	height: 100%;
+}
+
+.quote-display {
+	color: wheat;
+}
+
+.quote-button {
+	background: rgb(54, 11, 11);
+	border-radius: 20px;
+	padding: 10px 15px;
+	color: wheat;
+	font-size: 1rem;
+	margin-top: 20px;
+	&:hover {
+		background-color: rgb(68, 7, 7);
+	}
+}

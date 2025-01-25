@@ -1,6 +1,14 @@
 import "./style.scss";
 import quotes from "./ts/quotes";
 
+/*
+Hämtar quotes slumpmässigt från arrayen som innehåller alla quotes.
+Väljer ut en quote.
+Hämtar knappen och p taggen.
+När man klickar på knappen ska citatet visa sig i p taggen.
+*/
+
+
 // Genererar ett slumpmässigt tal och multiplicerar med antalet som finns i arrayen och avrundar ner till heltal för att matcha arrayen. Returnerar sen ett quote baserat på indexet som slumpmässigt togs fram.
 function getRandomQuote(): string {
   const randomIndex = Math.floor(Math.random() * quotes.length);

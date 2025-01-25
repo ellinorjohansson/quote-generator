@@ -2,8 +2,8 @@ import "./style.scss";
 import quotes from "./ts/quotes";
 
 /*
-Hämtar quotes slumpmässigt från arrayen som innehåller alla quotes.
-Väljer ut en quote.
+Hämtar quotes slumpmässigt från arrayen som innehåller alla citat.
+Väljer ut ett citat.
 Hämtar knappen och p taggen.
 När man klickar på knappen ska citatet visa sig i p taggen.
 */

@@ -8,7 +8,6 @@ Hämtar knappen och p taggen.
 När man klickar på knappen ska citatet visa sig i p taggen.
 */
 
-
 // Genererar ett slumpmässigt tal och multiplicerar med antalet som finns i arrayen och avrundar ner till heltal för att matcha arrayen. Returnerar sen ett quote baserat på indexet som slumpmässigt togs fram.
 function getRandomQuote(): string {
   const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -24,3 +23,34 @@ quoteButton.addEventListener('click', () => {
   const randomQuote = getRandomQuote();
   quoteDisplay.textContent = randomQuote;
 })
+
+
+
+let currentQuote: string = "";
+
+quoteButton.addEventListener("click", () => {
+  currentQuote = getRandomQuote();
+  quoteDisplay.textContent = currentQuote;
+});
+
+const favoriteButton = document.getElementById('favoriteButton') as HTMLButtonElement;
+const favoriteQuotes = document.getElementById('favoriteQuotes') as HTMLElement;
+
+favoriteButton.addEventListener('click', addToFavorites);
+
+function addToFavorites(): void {
+  if (currentQuote) {
+    favoriteQuotes.innerHTML += `<li>${currentQuote}</li>`;
+  } else {
+    const tempMessage = document.createElement("li");
+    tempMessage.textContent = "Generate a quote first before adding it to favorites!";
+    tempMessage.style.color = "red"; 
+  
+    favoriteQuotes.appendChild(tempMessage);
+  
+    setTimeout(() => {
+      tempMessage.remove();
+    }, 2000); 
+  }
+  
+}

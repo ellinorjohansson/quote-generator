@@ -21,6 +21,7 @@ main {
 	color: wheat;
 	font-size: 1rem;
   margin: 60px;
+	margin-top: 300px;
 }
 
 .buttons {
@@ -36,6 +37,7 @@ main {
 	color: wheat;
 	font-size: 1rem;
 	margin-right: 15px;
+	cursor: pointer;
 	&:hover {
 		background-color: rgb(66, 13, 13);
 	}
@@ -47,6 +49,7 @@ main {
 	padding: 10px 15px;
 	color: wheat;
 	font-size: 1rem;
+	cursor: pointer;
 	&:hover {
 		background-color: rgb(66, 13, 13);
 	}
@@ -56,10 +59,17 @@ main {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	border: 3px solid rgb(22, 22, 22);
+	margin-top: 200px;
 }
 
 .favorites-header {
 	color: wheat;
 	border-bottom: 3px solid rgb(22, 22, 22);
 	font-weight: 100;
+}
+
+.favorite-quote {
+	color: wheat;
+	font-size: 1rem;
 }

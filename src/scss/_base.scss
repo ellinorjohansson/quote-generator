@@ -6,18 +6,27 @@ body {
 }
 
 main {
+	background-color: rgb(66, 13, 13);
+	height: 100%;
+}
+
+.quote-section {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: rgb(66, 13, 13);
-	height: 100%;
 }
 
 .quote-display {
 	color: wheat;
 	font-size: 1rem;
-    margin: 60px;
+  margin: 60px;
+}
+
+.buttons {
+	border: 10px solid rgb(54, 5, 5);
+	border-radius: 26px;
+	background-color: rgb(51, 4, 4);
 }
 
 .quote-button {
@@ -26,7 +35,31 @@ main {
 	padding: 10px 15px;
 	color: wheat;
 	font-size: 1rem;
+	margin-right: 15px;
 	&:hover {
 		background-color: rgb(66, 13, 13);
 	}
+}
+
+.favorites-button {
+	background: rgb(54, 11, 11);
+	border-radius: 20px;
+	padding: 10px 15px;
+	color: wheat;
+	font-size: 1rem;
+	&:hover {
+		background-color: rgb(66, 13, 13);
+	}
+}
+
+.favorites-section {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.favorites-header {
+	color: wheat;
+	border-bottom: 3px solid rgb(22, 22, 22);
+	font-weight: 100;
 }

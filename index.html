@@ -8,8 +8,17 @@
   </head>
   <body>
     <main>
-      <p id="quoteDisplay" class="quote-display"></p>
-      <button id="quoteButton" class="quote-button">Generate quote</button>
+      <section class="quote-section">
+        <p id="quoteDisplay" class="quote-display"></p>
+        <div class="buttons">
+          <button id="quoteButton" class="quote-button">Generate quote </button>
+          <button id="favoriteButton" class="favorites-button">Add to favorites 🩶</button>
+        </div>
+      </section>
+      <section class="favorites-section">
+        <h2 class="favorites-header">Favorites</h2>
+        <ul id="favoriteQuotes"></ul>
+      </section>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>

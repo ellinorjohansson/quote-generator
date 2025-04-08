@@ -3,7 +3,7 @@
 
 # Quote Generator
 
-Quote Generator is a simple and clean app built with HTML, Sass, and TypeScript. The app displays inspiring, funny, or thoughtful quotes one at a time. 
+Quote Generator is a simple generator built with HTML, Sass, and TypeScript. The app displays inspiring, funny, or thoughtful quotes one at a time. 
 
 ## Table of Contents
 

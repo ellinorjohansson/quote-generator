@@ -22,9 +22,12 @@ const quoteDisplay = document.getElementById('quoteDisplay') as HTMLParagraphEle
 quoteButton.addEventListener('click', () => {
   const randomQuote = getRandomQuote();
   quoteDisplay.textContent = randomQuote;
+
+  // Lägg till fade-in animationen
+  quoteDisplay.classList.remove("fade-in");
+  void quoteDisplay.offsetWidth; // Force a reflow to retrigger animation
+  quoteDisplay.classList.add("fade-in");
 })
-
-
 
 let currentQuote: string = "";
 
@@ -36,7 +39,15 @@ quoteButton.addEventListener("click", () => {
 const favoriteButton = document.getElementById('favoriteButton') as HTMLButtonElement;
 const favoriteQuotes = document.getElementById('favoriteQuotes') as HTMLElement;
 
-favoriteButton.addEventListener('click', addToFavorites);
+favoriteButton.addEventListener('click', () => {
+  // Klickanimation på favoritknappen
+  favoriteButton.classList.add("clicked");
+  setTimeout(() => {
+    favoriteButton.classList.remove("clicked");
+  }, 300);
+
+  addToFavorites();
+});
 
 function addToFavorites(): void {
   if (currentQuote) {
@@ -52,5 +63,4 @@ function addToFavorites(): void {
       tempMessage.remove();
     }, 2000); 
   }
-  
 }
